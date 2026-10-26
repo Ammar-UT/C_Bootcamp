@@ -1,0 +1,10 @@
+# Ignore everything by default
+*
+!*/
+
+
+!.gitignore
+
+# Whitelist PasswordChecker source code and executable
+!PasswordChecker.c
+!passchecker
