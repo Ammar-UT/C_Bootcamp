@@ -8,3 +8,6 @@
 # Whitelist PasswordChecker source code and executable
 !PasswordChecker.c
 !passchecker
+
+# Documentation
+!README.md
