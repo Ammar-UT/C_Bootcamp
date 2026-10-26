@@ -12,8 +12,9 @@ int main() {
     int symbol = 0;
     int score = 0;
 
-    printf("Note Password must contains Uppercase, Lowercase, Numbers and Symbols\n");
-    printf("Enter your password: ");
+    printf("\nNote Password must contains: \n -Uppercase, \n -Lowercase, \n -Numbers, \n -Symbols\n");
+    printf("-------------------------------------------------");
+    printf("\nEnter your password: ");
     scanf("%s", password);
 
     for (int i = 0; i < 100; i++) {
@@ -26,7 +27,9 @@ int main() {
     if (length >= 8) {
         score += 1;
     } else {
+        printf("\n-------------------------------------------------\n");
         printf("Password is too short\n");
+        printf("-------------------------------------------------\n");
         return 0;
     }
 
@@ -58,7 +61,8 @@ int main() {
     if (symbol) {
         score += 1;
     }
-
+    
+    printf("\n---------- Password Strength --------------------\n");
     if (score >= 5) {
         printf("Password is Very Strong\n");
     } else if (score >= 4) {
@@ -72,6 +76,8 @@ int main() {
     }
 
     printf("Score: %d\n", score);
+    printf("\n---------- Password Checker Details -------------\n");
+
     if (length < 8) {
         printf("Password needs to be at least 8 characters long\n");
     }
