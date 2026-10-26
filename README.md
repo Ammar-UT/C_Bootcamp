@@ -9,12 +9,12 @@ Welcome to my C programming repository for the **Cyber Bootcamp**! This reposito
 - **Location:** `C Programming/Lesson 02/PasswordChecker.c`
 - **Topic:** Arrays, Strings, Loops, and Character Classification (`<ctype.h>`)
 
-### 📖 Overview
+### Overview
 The **Password Strength Checker** is a CLI tool developed in C that assesses the strength of a user-provided password based on standard security requirements. It calculates an overall score and provides immediate feedback on what criteria need improvement.
 
 ---
 
-### 🛡️ Password Criteria
+### Password Criteria
 To achieve a high security score, passwords are evaluated against five fundamental rules:
 
 | Requirement | Description | Check |
