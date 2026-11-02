@@ -8,6 +8,13 @@
 # Whitelist PasswordChecker source code and executable
 !PasswordChecker.c
 !passchecker
+# Whitelist Assignments
+!Assignments/
+!Software*.pdf
 
 # Documentation
 !README.md
+
+# Assignments
+!Assignments/
+!Assignments/**
