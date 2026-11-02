@@ -22,3 +22,8 @@
 # Assignments
 !Assignments/
 !Assignments/**
+
+# GitHub Pages
+!docs/
+!docs/**
+
