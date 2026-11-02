@@ -1,5 +1,8 @@
 # Cyber Bootcamp: C Programming & Assignments
 
+> 🌐 **Live Interactive Infographic (GitHub Pages):** [https://Ammar-UT.github.io/C_Bootcamp/](https://Ammar-UT.github.io/C_Bootcamp/)  
+> Visualizing the **Software Framework vs. Library** architectural research as a modern Bento-grid infographic.
+
 Welcome to my repository for the **Cyber Bootcamp**! This repository tracks my coursework, coding projects, and technical research throughout the program.
 
 ---
