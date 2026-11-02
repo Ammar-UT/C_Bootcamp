@@ -11,9 +11,13 @@
 # Whitelist Assignments
 !Assignments/
 !Software*.pdf
+!*.png
+
 
 # Documentation
 !README.md
+
+
 
 # Assignments
 !Assignments/
