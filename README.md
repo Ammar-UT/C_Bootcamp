@@ -6,16 +6,31 @@ Welcome to my repository for the **Cyber Bootcamp**! This repository tracks my c
 
 ## Table of Contents
 1. [Overview](#overview)
-2. [Assignments & Research](#assignments--research)
+2. [Branches](#branches)
+3. [Assignments & Research](#assignments--research)
    - [Assignment: Software Framework vs. Library](#assignment-software-framework-vs-library)
    - [Assignment: Password Strength Checker](#assignment-password-strength-checker)
-3. [Repository Structure](#repository-structure)
-4. [Getting Started](#getting-started)
+4. [Repository Structure](#repository-structure)
+5. [Getting Started](#getting-started)
 
 ---
 
 ## Overview
 This repository documents practical work across systems programming in C, security practices, and core software engineering concepts studied in the Cyber Bootcamp.
+
+---
+
+## Branches
+
+This repository is organized into the following branches:
+
+- **`main`**: Contains the core coursework, lessons, and foundational C programming exercises.
+- **`assignments`**: Dedicated branch containing standalone research, presentation materials, deliverables, and assignment write-ups (such as the Framework vs. Library research).
+
+To switch to the `assignments` branch:
+```bash
+git checkout assignments
+```
 
 ---
 
