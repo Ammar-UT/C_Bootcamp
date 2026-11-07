@@ -2,29 +2,26 @@
 *
 !*/
 
-
 !.gitignore
 
 # Whitelist PasswordChecker source code and executable
 !PasswordChecker.c
 !passchecker
-# Whitelist Assignments
-!Assignments/
-!Software*.pdf
-!*.png
 
-
-# Documentation
-!README.md
-
-
-
-# Assignments
+# Whitelist Root Assignments
 !Assignments/
 !Assignments/**
 
-# GitHub Pages
+# Whitelist C Programming Assignments
+!C Programming/Assignments/
+!C Programming/Assignments/**
+
+# Documentation & Web
+!README.md
 !index.html
 !docs/
 !docs/**
 
+# Ignore build artifacts / binaries within C-HexadecimalViewer
+bin/
+*.o
