@@ -1,18 +1,19 @@
-# Cyber Bootcamp: C Programming & Assignments
+# Cyber Bootcamp: Coursework & Assignments
 
 > 🌐 **Live Interactive Infographic (GitHub Pages):** [https://Ammar-UT.github.io/C_Bootcamp/](https://Ammar-UT.github.io/C_Bootcamp/)  
-> Visualizing the **Software Framework vs. Library** architectural research as a modern Bento-grid infographic.
+> Visualizing the **Software Framework vs. Library** architectural research as a modern interactive Bento-grid infographic.
 
-Welcome to my repository for the **Cyber Bootcamp**! This repository tracks my coursework, coding projects, and technical research throughout the program.
+Welcome to my repository for the **Cyber Bootcamp**! This repository tracks my coursework, hands-on programming projects, assignments, and technical research throughout the program.
 
 ---
 
 ## Table of Contents
 1. [Overview](#overview)
 2. [Branches](#branches)
-3. [Assignments & Research](#assignments--research)
-   - [Assignment: Software Framework vs. Library](#assignment-software-framework-vs-library)
-   - [Assignment: Password Strength Checker](#assignment-password-strength-checker)
+3. [Assignments & Deliverables](#assignments--deliverables)
+   - [1. Software Framework vs. Library (Research & Infographic)](#1-software-framework-vs-library)
+   - [2. Password Strength Assessment CLI](#2-password-strength-assessment-cli)
+   - [3. C-HexadecimalViewer (Hex Dump Utility)](#3-c-hexadecimalviewer-hex-dump-utility)
 4. [Repository Structure](#repository-structure)
 5. [Getting Started](#getting-started)
 
@@ -25,73 +26,50 @@ This repository documents practical work across systems programming in C, securi
 
 ## Branches
 
-This repository is organized into the following branches:
+This repository is organized into distinct branches:
 
-- **`main`**: Contains the core coursework, lessons, and foundational C programming exercises.
-- **`assignments`**: Dedicated branch containing standalone research, presentation materials, deliverables, and assignment write-ups (such as the Framework vs. Library research).
+- **`main`**: Contains foundational lessons, exercises, and standard syllabus coursework.
+- **`Assignments`**: Dedicated branch consolidating all standalone deliverables, in-depth technical reports, interactive demos, and assignment projects.
 
-To switch to the `assignments` branch:
+To switch to the `Assignments` branch:
 ```bash
-git checkout assignments
+git checkout Assignments
 ```
 
 ---
 
-## Assignments & Research
+## Assignments & Deliverables
 
-### Assignment: Software Framework vs. Library
-- **Location:** [`Assignments/Software Framework vs Library.pdf`](file:///home/d1337/Documents/Programming/CyberBootcamp/Assignments/Software%20Framework%20vs%20Library.pdf)
-- **Author:** Ammar Alabsee
-- **Date:** 2 Nov 2026
+All assignments are organized under the [`Assignments/`](file:///home/d1337/Documents/Programming/CyberBootcamp/Assignments) directory.
 
-#### Executive Summary
-Understanding the distinction between a **framework** and a **library** is essential during development. While many simplify the concept as *"a framework is a collection of libraries"*, the core architectural difference lies in the **Inversion of Control (IoC)** — *"Who calls whom"*:
-- **Library:** Your application code calls the library functions to perform specific, isolated tasks. You maintain control over application flow.
-- **Framework:** The framework dictates the architecture and control flow, invoking your custom code at predefined extension points.
+### 1. Software Framework vs. Library
+A deep-dive research paper and visual infographic exploring the architectural nuances between software frameworks and libraries, focusing on Inversion of Control (IoC).
 
-#### Key Comparison Matrix
-
-| Evaluation Category | Framework | Library |
-| :--- | :--- | :--- |
-| **Core Concept / Focus** | Complete application structure comprising APIs, compilers, support tools, and conventions. | Targeted collection of helper modules, classes, and pre-written functions. |
-| **Control Flow** | Framework calls user code (*Inversion of Control*). | User code calls the library. |
-| **Flexibility & Swappability** | High architectural lock-in; difficult to swap or replace once chosen. | High flexibility; easy to replace with alternative packages. |
-| **Performance & Footprint** | Heavier footprint, larger abstraction overhead, structured boilerplate. | Lightweight, minimal overhead, pay only for what you import. |
-| **Integration** | Best suited to scaffold new applications from the start. | Integrates effortlessly into existing codebases to add specific features. |
-| **Common Examples** | Next.js, Django, Laravel, Gin, PyTorch | React, Axios, Pandas, Redux, jQuery |
-
-#### When to Use Which
-- **Choose a Framework when:** Building complex, multi-route applications needing standardized routing, state management, security scaffolding, or enterprise architectural consistency across teams.
-- **Choose a Library when:** Solving a specific, targeted challenge (e.g., HTTP requests, data manipulation) or when lightweight execution and full architectural flexibility are critical.
+- **Project Folder:** [`Assignments/Framework-vs-Library/`](file:///home/d1337/Documents/Programming/CyberBootcamp/Assignments/Framework-vs-Library)
+- **PDF Presentation:** [`Software Framework vs Library.pdf`](file:///home/d1337/Documents/Programming/CyberBootcamp/Assignments/Framework-vs-Library/Software%20Framework%20vs%20Library.pdf)
+- **Interactive Bento Infographic:** [`framework-vs-library-bento.html`](file:///home/d1337/Documents/Programming/CyberBootcamp/Assignments/Framework-vs-Library/framework-vs-library-bento.html)
+- **Summary Diagram:** [`framework-vs-library-2.jpg`](file:///home/d1337/Documents/Programming/CyberBootcamp/Assignments/Framework-vs-Library/framework-vs-library-2.jpg)
+- **Live Demo:** [GitHub Pages Live App](https://Ammar-UT.github.io/C_Bootcamp/)
 
 ---
 
-### Assignment: Password Strength Checker
-- **Location:** [`C Programming/Lesson 02/PasswordChecker.c`](file:///home/d1337/Documents/Programming/CyberBootcamp/C%20Programming/Lesson%2002/PasswordChecker.c)
-- **Topic:** Arrays, Strings, Loops, and Character Classification (`<ctype.h>`)
+### 2. Password Strength Assessment CLI
+A command-line security tool in C evaluating password robustness against standard complexity rules and providing granular remediation guidance.
 
-#### Overview
-A CLI security tool developed in C that evaluates password robustness against 5 foundational criteria and provides immediate remediation feedback.
+- **Project Folder:** [`Assignments/PasswordStrengthChecker/`](file:///home/d1337/Documents/Programming/CyberBootcamp/Assignments/PasswordStrengthChecker)
+- **Source Code:** [`PasswordChecker.c`](file:///home/d1337/Documents/Programming/CyberBootcamp/Assignments/PasswordStrengthChecker/PasswordChecker.c)
+- **Key Concepts:** Strings, loops, `<ctype.h>` classification (`isupper`, `islower`, `isdigit`, `ispunct`), conditional scoring.
 
-#### Password Evaluation Rules
+---
 
-| Requirement | Description | Check |
-| :--- | :--- | :--- |
-| **Length** | At least 8 characters long | Character count $\ge$ 8 |
-| **Uppercase** | Contains uppercase letters (`A-Z`) | `isupper()` |
-| **Lowercase** | Contains lowercase letters (`a-z`) | `islower()` |
-| **Numbers** | Contains numerical digits (`0-9`) | `isdigit()` |
-| **Symbols** | Contains special characters (`!`, `@`, `#`, etc.) | `ispunct()` |
+### 3. C-HexadecimalViewer (Hex Dump Utility)
+A low-level CLI binary inspector in C that prints raw file bytes in an 8-digit offset, 16-byte hex representation, and sanitized printable ASCII output.
 
-#### Scoring Levels
-
-| Score | Rating |
-| :---: | :--- |
-| **5** | **Very Strong** |
-| **4** | **Strong** |
-| **3** | **Medium** |
-| **2** | **Weak** |
-| **0 - 1** | **Very Weak** |
+- **Project Folder:** [`Assignments/C-HexadecimalViewer/`](file:///home/d1337/Documents/Programming/CyberBootcamp/Assignments/C-HexadecimalViewer)
+- **Source Code:** [`src/C-HexadecimalViewer.c`](file:///home/d1337/Documents/Programming/CyberBootcamp/Assignments/C-HexadecimalViewer/src/C-HexadecimalViewer.c)
+- **Build Script:** [`makefile`](file:///home/d1337/Documents/Programming/CyberBootcamp/Assignments/C-HexadecimalViewer/makefile)
+- **Technical Explanation Blog:** [`HEX_VIEWER_EXPLANATION.md`](file:///home/d1337/Documents/Programming/CyberBootcamp/Assignments/C-HexadecimalViewer/HEX_VIEWER_EXPLANATION.md)
+- **Key Concepts:** Stream chunking via `fread()`, binary file handling (`"rb"`), safe ASCII filtering (`isprint()`), column padding, defensive error redirection to `stderr`.
 
 ---
 
@@ -100,31 +78,40 @@ A CLI security tool developed in C that evaluates password robustness against 5 
 ```text
 .
 ├── Assignments/
-│   ├── Software Framework vs Library.pdf    # Research & presentation on Framework vs. Library
-│   └── framework-vs-library.jpg             # Summary visual diagram
-├── C Programming/
-│   └── Lesson 02/
-│       ├── PasswordChecker.c                # Password strength assessment source code
-│       └── passchecker                      # Compiled binary
+│   ├── C-HexadecimalViewer/                 # Hexadecimal inspector project
+│   │   ├── HEX_VIEWER_EXPLANATION.md        # Complete implementation blog
+│   │   ├── makefile                         # Build automation
+│   │   └── src/
+│   │       └── C-HexadecimalViewer.c        # Hex dump source code
+│   ├── Framework-vs-Library/                # Research and visual presentation
+│   │   ├── Software Framework vs Library.pdf
+│   │   ├── framework-vs-library-2.jpg
+│   │   └── framework-vs-library-bento.html
+│   └── PasswordStrengthChecker/             # Password complexity validator
+│       └── PasswordChecker.c
+├── C Programming/                           # Coursework and lesson practice
+├── Python Programming/                      # Python exercises and scripts
+├── docs/                                    # GitHub Pages deployment site
 ├── .gitignore                               # Whitelist configuration
-└── README.md                                # Project documentation
+└── README.md                                # Root documentation
 ```
 
 ---
 
 ## Getting Started
 
-### Compiling & Running C Programs
+### Building & Running Assignments
 
-Navigate to the lesson directory and compile using `gcc`:
-
+#### Hexadecimal Viewer:
 ```bash
-cd "C Programming/Lesson 02"
+cd "Assignments/C-HexadecimalViewer"
+make
+./bin/c-hexdump makefile
+```
+
+#### Password Strength Checker:
+```bash
+cd "Assignments/PasswordStrengthChecker"
 gcc -o passchecker PasswordChecker.c
 ./passchecker
 ```
-
-### Viewing PDF Assignments
-
-The research documentation is available directly in the [`Assignments/`](file:///home/d1337/Documents/Programming/CyberBootcamp/Assignments) directory:
-- [Software Framework vs Library.pdf](file:///home/d1337/Documents/Programming/CyberBootcamp/Assignments/Software%20Framework%20vs%20Library.pdf)
