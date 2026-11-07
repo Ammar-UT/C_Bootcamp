@@ -1,0 +1,6 @@
+# Ignore build artifacts / binaries within assignment projects
+bin/
+*.o
+*.bin
+.vscode/
+

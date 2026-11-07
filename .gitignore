@@ -11,6 +11,8 @@
 # Whitelist Root Assignments
 !Assignments/
 !Assignments/**
+Assignments/.vscode/
+Assignments/**/.vscode/
 
 # Whitelist C Programming Assignments
 !C Programming/Assignments/
@@ -22,6 +24,7 @@
 !docs/
 !docs/**
 
-# Ignore build artifacts / binaries within C-HexadecimalViewer
+# Ignore build artifacts / binaries
 bin/
 *.o
+*.bin
