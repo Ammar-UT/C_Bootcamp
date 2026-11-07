@@ -14,6 +14,7 @@ Welcome to my repository for the **Cyber Bootcamp**! This repository tracks my c
    - [1. Software Framework vs. Library (Research & Infographic)](#1-software-framework-vs-library)
    - [2. Password Strength Assessment CLI](#2-password-strength-assessment-cli)
    - [3. C-HexadecimalViewer (Hex Dump Utility)](#3-c-hexadecimalviewer-hex-dump-utility)
+   - [4. C-LogFileParser (Log File Keyword Scanner)](#4-c-logfileparser-log-file-keyword-scanner)
 4. [Repository Structure](#repository-structure)
 5. [Getting Started](#getting-started)
 
@@ -73,6 +74,17 @@ A low-level CLI binary inspector in C that prints raw file bytes in an 8-digit o
 
 ---
 
+### 4. C-LogFileParser (Log File Keyword Scanner)
+A fast, memory-efficient command-line log analysis tool written in C that scans log files line by line, isolates security alerts by keyword (e.g., `Failed`, `ERROR`), and prints an audit report.
+
+- **Project Folder:** [`Assignments/C-LogFileParser.c/`](https://github.com/Ammar-UT/C_Bootcamp/tree/Assignments/Assignments/C-LogFileParser.c)
+- **Source Code:** [`src/C-LogFileParser.c`](https://github.com/Ammar-UT/C_Bootcamp/blob/Assignments/Assignments/C-LogFileParser.c/src/C-LogFileParser.c)
+- **Build Script:** [`makefile`](https://github.com/Ammar-UT/C_Bootcamp/blob/Assignments/Assignments/C-LogFileParser.c/makefile)
+- **Technical Explanation Blog:** [`LOG_FILE_PARSER_EXPLANATION.md`](https://github.com/Ammar-UT/C_Bootcamp/blob/Assignments/Assignments/C-LogFileParser.c/LOG_FILE_PARSER_EXPLANATION.md)
+- **Key Concepts:** Bounded streaming ingestion (`fgets`), fast substring matching (`strstr`), cross-platform newline stripping (`strcspn`), constant $O(1)$ memory footprint, defensive error handling (`perror`).
+
+---
+
 ## Repository Structure
 
 ```text
@@ -83,6 +95,11 @@ A low-level CLI binary inspector in C that prints raw file bytes in an 8-digit o
 │   │   ├── makefile                         # Build automation
 │   │   └── src/
 │   │       └── C-HexadecimalViewer.c        # Hex dump source code
+│   ├── C-LogFileParser.c/                   # Log file keyword scanner project
+│   │   ├── LOG_FILE_PARSER_EXPLANATION.md   # Complete implementation blog
+│   │   ├── makefile                         # Build automation
+│   │   └── src/
+│   │       └── C-LogFileParser.c            # Log parser source code
 │   ├── Framework-vs-Library/                # Research and visual presentation
 │   │   ├── Software Framework vs Library.pdf
 │   │   ├── framework-vs-library-2.jpg
@@ -114,4 +131,11 @@ make
 cd "Assignments/PasswordStrengthChecker"
 gcc -o passchecker PasswordChecker.c
 ./passchecker
+```
+
+#### Log File Parser:
+```bash
+cd "Assignments/C-LogFileParser.c"
+make
+./bin/logparser /var/log/auth.log Failed
 ```
