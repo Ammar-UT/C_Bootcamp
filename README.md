@@ -40,15 +40,15 @@ git checkout Assignments
 
 ## Assignments & Deliverables
 
-All assignments are organized under the [`Assignments/`](file:///home/d1337/Documents/Programming/CyberBootcamp/Assignments) directory.
+All assignments and projects are hosted on the [`Assignments`](https://github.com/Ammar-UT/C_Bootcamp/tree/Assignments) branch under the [`Assignments/`](https://github.com/Ammar-UT/C_Bootcamp/tree/Assignments/Assignments) directory.
 
 ### 1. Software Framework vs. Library
 A deep-dive research paper and visual infographic exploring the architectural nuances between software frameworks and libraries, focusing on Inversion of Control (IoC).
 
-- **Project Folder:** [`Assignments/Framework-vs-Library/`](file:///home/d1337/Documents/Programming/CyberBootcamp/Assignments/Framework-vs-Library)
-- **PDF Presentation:** [`Software Framework vs Library.pdf`](file:///home/d1337/Documents/Programming/CyberBootcamp/Assignments/Framework-vs-Library/Software%20Framework%20vs%20Library.pdf)
-- **Interactive Bento Infographic:** [`framework-vs-library-bento.html`](file:///home/d1337/Documents/Programming/CyberBootcamp/Assignments/Framework-vs-Library/framework-vs-library-bento.html)
-- **Summary Diagram:** [`framework-vs-library-2.jpg`](file:///home/d1337/Documents/Programming/CyberBootcamp/Assignments/Framework-vs-Library/framework-vs-library-2.jpg)
+- **Project Folder:** [`Assignments/Framework-vs-Library/`](https://github.com/Ammar-UT/C_Bootcamp/tree/Assignments/Assignments/Framework-vs-Library)
+- **PDF Presentation:** [`Software Framework vs Library.pdf`](https://github.com/Ammar-UT/C_Bootcamp/blob/Assignments/Assignments/Framework-vs-Library/Software%20Framework%20vs%20Library.pdf)
+- **Interactive Bento Infographic:** [`framework-vs-library-bento.html`](https://github.com/Ammar-UT/C_Bootcamp/blob/Assignments/Assignments/Framework-vs-Library/framework-vs-library-bento.html)
+- **Summary Diagram:** [`framework-vs-library-2.jpg`](https://github.com/Ammar-UT/C_Bootcamp/blob/Assignments/Assignments/Framework-vs-Library/framework-vs-library-2.jpg)
 - **Live Demo:** [GitHub Pages Live App](https://Ammar-UT.github.io/C_Bootcamp/)
 
 ---
@@ -56,8 +56,8 @@ A deep-dive research paper and visual infographic exploring the architectural nu
 ### 2. Password Strength Assessment CLI
 A command-line security tool in C evaluating password robustness against standard complexity rules and providing granular remediation guidance.
 
-- **Project Folder:** [`Assignments/PasswordStrengthChecker/`](file:///home/d1337/Documents/Programming/CyberBootcamp/Assignments/PasswordStrengthChecker)
-- **Source Code:** [`PasswordChecker.c`](file:///home/d1337/Documents/Programming/CyberBootcamp/Assignments/PasswordStrengthChecker/PasswordChecker.c)
+- **Project Folder:** [`Assignments/PasswordStrengthChecker/`](https://github.com/Ammar-UT/C_Bootcamp/tree/Assignments/Assignments/PasswordStrengthChecker)
+- **Source Code:** [`PasswordChecker.c`](https://github.com/Ammar-UT/C_Bootcamp/blob/Assignments/Assignments/PasswordStrengthChecker/PasswordChecker.c)
 - **Key Concepts:** Strings, loops, `<ctype.h>` classification (`isupper`, `islower`, `isdigit`, `ispunct`), conditional scoring.
 
 ---
@@ -65,10 +65,10 @@ A command-line security tool in C evaluating password robustness against standar
 ### 3. C-HexadecimalViewer (Hex Dump Utility)
 A low-level CLI binary inspector in C that prints raw file bytes in an 8-digit offset, 16-byte hex representation, and sanitized printable ASCII output.
 
-- **Project Folder:** [`Assignments/C-HexadecimalViewer/`](file:///home/d1337/Documents/Programming/CyberBootcamp/Assignments/C-HexadecimalViewer)
-- **Source Code:** [`src/C-HexadecimalViewer.c`](file:///home/d1337/Documents/Programming/CyberBootcamp/Assignments/C-HexadecimalViewer/src/C-HexadecimalViewer.c)
-- **Build Script:** [`makefile`](file:///home/d1337/Documents/Programming/CyberBootcamp/Assignments/C-HexadecimalViewer/makefile)
-- **Technical Explanation Blog:** [`HEX_VIEWER_EXPLANATION.md`](file:///home/d1337/Documents/Programming/CyberBootcamp/Assignments/C-HexadecimalViewer/HEX_VIEWER_EXPLANATION.md)
+- **Project Folder:** [`Assignments/C-HexadecimalViewer/`](https://github.com/Ammar-UT/C_Bootcamp/tree/Assignments/Assignments/C-HexadecimalViewer)
+- **Source Code:** [`src/C-HexadecimalViewer.c`](https://github.com/Ammar-UT/C_Bootcamp/blob/Assignments/Assignments/C-HexadecimalViewer/src/C-HexadecimalViewer.c)
+- **Build Script:** [`makefile`](https://github.com/Ammar-UT/C_Bootcamp/blob/Assignments/Assignments/C-HexadecimalViewer/makefile)
+- **Technical Explanation Blog:** [`HEX_VIEWER_EXPLANATION.md`](https://github.com/Ammar-UT/C_Bootcamp/blob/Assignments/Assignments/C-HexadecimalViewer/HEX_VIEWER_EXPLANATION.md)
 - **Key Concepts:** Stream chunking via `fread()`, binary file handling (`"rb"`), safe ASCII filtering (`isprint()`), column padding, defensive error redirection to `stderr`.
 
 ---
