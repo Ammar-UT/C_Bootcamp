@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>التكليف الرابع عشر: أداة التفاعل مع DOM والوقاية من ثغرات DOM-XSS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header Section -->
+    <header>
+      <div class="badge">الأمن السيبراني &middot; JavaScript &amp; Web Security</div>
+      <h1>أداة التفاعل مع DOM والوقاية من ثغرات DOM-XSS</h1>
+      <p class="subtitle">
+        تطبيق عملي لتوضيح الفارق الجوهري بين إدراج المدخلات عبر الخصائص القابلة للتنفيذ مثل <code>innerHTML</code> 
+        وبين الطرق الآمنة لمعالجة النصوص مثل <code>textContent</code> و <code>createElement</code>.
+      </p>
+    </header>
+
+    <!-- Interactive Input Card -->
+    <section class="card">
+      <h2 class="card-title">
+        <span>⚙️</span> مدخلات المستخدم (User Input Source)
+      </h2>
+
+      <div class="form-group">
+        <label for="userInput">أدخل نصاً عادياً أو كود HTML/JavaScript لاختباره:</label>
+        <textarea id="userInput" rows="3" placeholder="اكتب هنا أو اختر حمولة تجريبية من الأسفل..."></textarea>
+        
+        <!-- Quick Payload Helpers -->
+        <div class="payload-helpers">
+          <span>حمولات جاهزة للاختبار (Payloads):</span>
+          <button type="button" class="btn-chip" onclick="setPayload('&lt;img src=x onerror=alert(1)&gt;')">
+            &lt;img src=x onerror=alert(1)&gt;
+          </button>
+          <button type="button" class="btn-chip" onclick="setPayload('&lt;svg onload=alert(\'DOM-XSS\')&gt;')">
+            &lt;svg onload=alert('DOM-XSS')&gt;
+          </button>
+          <button type="button" class="btn-chip" onclick="setPayload('&lt;b style=&quot;color:#58a6ff;&quot;&gt;نص تجريبي منسق بـ HTML&lt;/b&gt;')">
+            &lt;b&gt;نص منسق&lt;/b&gt;
+          </button>
+        </div>
+      </div>
+
+      <!-- Control Buttons -->
+      <div class="button-row">
+        <button id="btnRenderUnsafe" class="btn btn-danger" type="button">
+          <span>⚠️</span> عرض غير آمن (innerHTML)
+        </button>
+        <button id="btnRenderSafe" class="btn btn-success" type="button">
+          <span>🛡️</span> عرض آمن (textContent)
+        </button>
+        <button id="btnClear" class="btn btn-secondary" type="button">
+          <span>🔄</span> مسح
+        </button>
+      </div>
+    </section>
+
+    <!-- Side-by-Side Comparison Grid -->
+    <section class="comparison-grid">
+      <!-- Vulnerable Output Panel -->
+      <div class="output-panel panel-vulnerable">
+        <div class="panel-header">
+          <span class="tag-badge tag-vulnerable">غير آمن (Vulnerable)</span>
+          <span class="sink-code">Sink: element.innerHTML</span>
+        </div>
+        <div id="outputUnsafe" class="output-area placeholder-text">
+          المخرجات غير الآمنة ستظهر هنا...
+        </div>
+      </div>
+
+      <!-- Secure Output Panel -->
+      <div class="output-panel panel-secure">
+        <div class="panel-header">
+          <span class="tag-badge tag-secure">آمن (Secure)</span>
+          <span class="sink-code">Sink: element.textContent</span>
+        </div>
+        <div id="outputSafe" class="output-area placeholder-text">
+          المخرجات الآمنة ستظهر هنا...
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Analysis & Educational Guide -->
+    <section class="info-section">
+      <h2 class="card-title">
+        <span>📚</span> التحليل الأمني والوقاية من ثغرات DOM-Based XSS
+      </h2>
+      <div class="info-grid">
+        <div class="info-item">
+          <h3 style="color: var(--accent-red);">🔴 خطورة الخاصية innerHTML</h3>
+          <p>
+            عند إسناد قيمة نصية غير موثوقة إلى <code>innerHTML</code>، يقوم متصفح الويب بتمرير السلسلة إلى مفسر الـ HTML (HTML Parser).
+          </p>
+          <ul>
+            <li>تُترجم الوسوم وعناصر الـ HTML كأوامر هيكلية.</li>
+            <li>يتم تشغيل دوال الـ JavaScript المضمنة في معالجات الأحداث مثل <code>onerror</code> أو <code>onload</code> تلقائياً فور محاولة المتصفح تحميل المورد.</li>
+          </ul>
+        </div>
+
+        <div class="info-item">
+          <h3 style="color: var(--accent-green);">🟢 الحماية باستخدام textContent</h3>
+          <p>
+            تتعامل الخاصية <code>textContent</code> وكذلك <code>document.createTextNode()</code> مع المدخلات كقيمة نصية بحتة (Raw String).
+          </p>
+          <ul>
+            <li>يتم تحييد المحارف الخاصة مثل <code>&lt;</code> و <code>&gt;</code> و <code>&amp;</code> تلقائياً من قِبل المتصفح.</li>
+            <li>لا يتم استدعاء مفسر HTML نهائياً، مما يبطل مفعول أي Payload خبيث ويمنع تنفيذ الأكواد كلياً.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
